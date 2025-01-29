@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+body h1 {
+    font-size: clamp(0.8rem, 4vi, 2rem);
+    text-align: center;
+    padding: 1vi;
+}
+
+#calc-container {
+    border-radius: 1vi;
+    background-color:  hsl(0, 0%, 20%);
+    overflow: hidden;
+}
+
+#calc-container #display {
+    padding: 1vi;
+    background-color:  hsl(0, 0%, 15%);
+    /* border-radius: 1vi; */
+    color: white;
+    font-size: clamp(1rem, 5vi, 2rem);
+    text-align: right;
+    border: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:end;
+    gap: 1vi;
+}
+
+#calc-container #display #operation {
+    padding: 1vi 1vi;
+    height: clamp(1rem, 5vi, 3rem);
+}
+
+#calc-container #display #results {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 1vi;
+}
+
+#calc-container #input {
+    border-radius: 1vi;
+
+
+}
+
+#calc-container #input #keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vi;
+    padding: 2vi;
+}
+
+
+#calc-container #input #keys button {
+    width: clamp(1.5rem, 5vi, 3rem);
+    height: clamp(1.5rem, 5vi, 3rem);
+    border-radius: 10%;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: clamp(1rem, 4vi, 2.5rem);
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+#calc-container #input #keys button:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+
+#calc-container #input #keys button:active {
+    background-color: hsl(0, 0%, 50%);
+}
+
+
+#calc-container #input #keys .operator-btn {
+    background-color: hsl(35, 100%, 55%);
+}
+
+#calc-container #input #keys .operator-btn:hover {
+    background-color: hsl(35, 100%, 65%);
+}
+
+#calc-container #input #keys .operator-btn:active {
+    background-color: hsl(35, 100%, 75%);
+}

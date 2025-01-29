@@ -1,1 +1,53 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+
+</head>
+
+<body>
+    <h1>Behold, a scientific calculator.</h1>
+    <div id="calc-container">
+        <div id="display">
+            <p id="operation">0</p>
+
+
+            <div id="results">
+                <p>=</p>
+                <p id="output">10</p>
+            </div>
+
+        </div>
+
+        <div id="input">
+            <div id="keys">
+                <button onclick="appendToOperation('+')" class="operator-btn">+</button>
+                <button onclick="appendToOperation('7')">7</button>
+                <button onclick="appendToOperation('8')">8</button>
+                <button onclick="appendToOperation('9')">9</button>
+                <button onclick="appendToOperation('-')" class="operator-btn">-</button>
+                <button onclick="appendToOperation('4')">4</button>
+                <button onclick="appendToOperation('5')">5</button>
+                <button onclick="appendToOperation('6')">6</button>
+                <button onclick="appendToOperation('×')" class="operator-btn">×</button>
+                <button onclick="appendToOperation('1')">1</button>
+                <button onclick="appendToOperation('2')">2</button>
+                <button onclick="appendToOperation('3')">3</button>
+                <button onclick="appendToOperation('/')" class="operator-btn">/</button>
+                <button onclick="appendToOperation('0')">0</button>
+                <button onclick="appendToOperation('.')">.</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="clearDisplay()" class="operator-btn">C</button>
+            </div>
+
+        </div>
+
+    </div>    
+</body>
+
+</html>

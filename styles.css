@@ -68,20 +68,20 @@ body h1 {
 
 #calc-container #input #keys {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     gap: 2vi;
     padding: 2vi;
 }
 
 
 #calc-container #input #keys button {
-    width: clamp(1.5rem, 5vi, 3rem);
+    width: clamp(1.5rem, 5vi, 5rem);
     height: clamp(1.5rem, 5vi, 3rem);
     border-radius: 10%;
     border: none;
     background-color: hsl(0, 0%, 30%);
     color: white;
-    font-size: clamp(1rem, 4vi, 2.5rem);
+    font-size: clamp(0.8rem, 3vi, 2.5rem);
     font-weight: bold;
     cursor: pointer;
 

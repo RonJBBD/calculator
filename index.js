@@ -49,11 +49,14 @@ function appendToOperation(input) {
         operations = [];
         clearFirst = false;
     }
+    else{
+        // I don't know what to do with this else.
+    }
 
     if (input.length > 1) {
         for (let val of input) {
-            operationText.textContent  += val;
             operations.push(val); 
+            operationText.textContent  += val;
         }
     }
     else if (input == "°"){
@@ -64,12 +67,12 @@ function appendToOperation(input) {
         operationText.textContent  += input;
     }
     else if (input == "-"){
-        if (operations.length == 0 || (isNaN(operations[operations.length - 1]) && operations[operations.length - 1] !== ")"))
-        {
+        if (operations.length == 0 || (isNaN(operations[operations.length - 1]) && operations[operations.length - 1] !== ")")){
             operations.push("-1");
             operations.push("*");
             operationText.textContent += "-";
-        } else {
+        } 
+        else{
             operations.push(input);
             operationText.textContent += input;
         }
@@ -82,8 +85,7 @@ function appendToOperation(input) {
         if (operations.length && !isNaN(operations[operations.length-1])){
             operations[operations.length-1] = operations[operations.length-1] + input;
         }
-        else{
-            
+        else{  
             operations.push(input);   
         }
         operationText.textContent += input;
@@ -129,8 +131,7 @@ function shuntingYard(operationsArray) {
                 operatorStack.length &&
                 (precedence[operatorStack[operatorStack.length - 1]] > precedence[token] || 
                     (precedence[operatorStack[operatorStack.length - 1]] == precedence[token] &&
-                        isLeftAssociative(token))))
-            {
+                        isLeftAssociative(token)))){
                 outputQueue.push(operatorStack.pop());
             }
             operatorStack.push(token);
@@ -189,7 +190,6 @@ function evaluateRPN(rpnArray) {
                             break;
                 case "^": stack.push(Math.pow(a, b)); break;
                 case "exp": stack.push(a*Math.pow(10,b)); break;
-                default : throw "error1";
             }
         } 
         else if (["sin", "cos", "tan", "log"].includes(token)) {
@@ -204,7 +204,6 @@ function evaluateRPN(rpnArray) {
                 case "log": if (a == "0"){throw "undefined"}
                             else {stack.push(Math.log10(a));}
                             break;
-                default : throw "error2";
             }
         }
     }

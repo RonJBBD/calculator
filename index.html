@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <h1>Behold, a scientific calculator.</h1>
+    <h1 id="heading">Behold, a scientific calculator.</h1>
     <div id="calc-container">
         <div id="display">
             <p id="operation"></p>
@@ -29,36 +29,36 @@
         <div id="input">
             <div id="keys">
 
+                <button id="btn-sin" class="operator-btn">sin</button>
+                <button id="btn-tan" class="operator-btn">tan</button>
+                <button id="btn-plus" class="operator-btn">+</button>
+                <button id="btn-seven">7</button>
+                <button id="btn-eight">8</button>
+                <button id="btn-nine">9</button>
+                <button id="btn-clear" class="operator-btn">C</button>
+                <button id="btn-cos" class="operator-btn">cos</button>
+                <button id="btn-log" class="operator-btn">log</button>
+                <button id="btn-minus" class="operator-btn">-</button>
+                <button id="btn-four">4</button>
+                <button id="btn-five">5</button>
+                <button id="btn-six">6</button>
+                <button id="btn-open-paren" class="operator-btn">(</button>
+                <button id="btn-pi">π</button>
+                <button id="btn-e">e</button>
+                <button id="btn-multiply" class="operator-btn">*</button>
+                <button id="btn-one">1</button>
+                <button id="btn-two">2</button>
+                <button id="btn-three">3</button>
+                <button id="btn-close-paren" class="operator-btn">)</button>
+                <button id="btn-degree">°</button>
+                <button id="btn-power" class="operator-btn">^</button>
+                <button id="btn-divide" class="operator-btn">/</button>
+                <button id="btn-exp" class="operator-btn">exp</button>
+                <button id="btn-zero">0</button>
+                <button id="btn-dot">.</button>
                 
-                <button onclick="appendToOperation('sin(')" class="operator-btn ">sin</button>
-                <button onclick="appendToOperation('tan(')" class="operator-btn">tan</button>
-                <button onclick="appendToOperation('+')" class="operator-btn">+</button>
-                <button onclick="appendToOperation('7')">7</button>
-                <button onclick="appendToOperation('8')">8</button>
-                <button onclick="appendToOperation('9')">9</button>
-                <button onclick="clearDisplay()" class="operator-btn">C</button>
-                <button onclick="appendToOperation('cos(')" class="operator-btn">cos</button>
-                <button onclick="appendToOperation('log(')" class="operator-btn">log</button>
-                <button onclick="appendToOperation('-')" class="operator-btn">-</button>
-                <button onclick="appendToOperation('4')">4</button>
-                <button onclick="appendToOperation('5')">5</button>
-                <button onclick="appendToOperation('6')">6</button>
-                <button onclick="appendToOperation('(')" class="operator-btn">(</button>
-                <button onclick="appendToOperation('π')">π</button>
-                <button onclick="appendToOperation('e')">e</button>
-                <button onclick="appendToOperation('×')" class="operator-btn">×</button>
-                <button onclick="appendToOperation('1')">1</button>
-                <button onclick="appendToOperation('2')">2</button>
-                <button onclick="appendToOperation('3')">3</button>
-                <button onclick="appendToOperation(')')" class="operator-btn">)</button>
-                <button onclick="appendToOperation('°')">°</button>
-                <button onclick="appendToOperation('^')" class="operator-btn">^</button>
-                <button onclick="appendToOperation('/')" class="operator-btn">/</button>
-                <button onclick="appendToOperation('exp(')" class="operator-btn">exp</button>
-                <button onclick="appendToOperation('0')">0</button>
-                <button onclick="appendToOperation('.')">.</button>
 
-                <button onclick="calculate()">=</button>
+                <button id="btn-calculate">=</button>
             </div>
 
         </div>

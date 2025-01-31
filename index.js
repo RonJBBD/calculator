@@ -90,7 +90,7 @@ function appendToOperation(input) {
     }
 
 
-    document.getElementById("heading").textContent = operations;
+    // document.getElementById("heading").textContent = operations;
 }
 
 
